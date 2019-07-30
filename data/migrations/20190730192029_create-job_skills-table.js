@@ -1,21 +1,21 @@
 exports.up = function(knex) {
-  return knex.schema.createTable("applicant_skills", table => {
+  return knex.schema.createTable("job_skills", table => {
     table.increments();
     table
-      .integer("applicantId", 128)
+      .integer("jobId", 128)
       .unsigned()
       .notNullable()
       .reference("id")
-      .inTable("applicants")
+      .inTable("jobs")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
     table
-      .string("applicantSkill", 128)
+      .string("jobSkill", 128)
       .notNullable()
       .unique();
   });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists("applicant_skills");
+  return knex.schema.dropTableIfExists("job_skills");
 };
