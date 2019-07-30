@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable("job_skills", table => {
+  return knex.schema.createTable("education", table => {
     table.increments();
     table
       .integer("applicantId", 128)
@@ -18,5 +18,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists("job_skills");
+  return knex.schema.dropTableIfExists("education");
 };
