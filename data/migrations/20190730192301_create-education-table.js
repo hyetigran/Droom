@@ -10,6 +10,10 @@ exports.up = function(knex) {
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
     table.string("eduSchool", 128).notNullable();
+    table.string("eduDegree", 128).notNullable();
+    table.string("eduDescription", 128).notNullable();
+    table.string("eduStartDate", 128).notNullable();
+    table.string("eduEndDate", 128).notNullable();
   });
 };
 
