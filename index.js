@@ -1,8 +1,12 @@
 const express = require("express");
-const bodyParse = require("body-parser");
+const bodyParser = require("body-parser");
+
+const serverMiddleware = require("./config/serverMiddleware");
 
 const app = express();
-app.use(bodyParser.json());
+
+serverMiddleware(app);
+
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to Droom" });
 });
