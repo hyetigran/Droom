@@ -33,7 +33,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", updateApplicantValidation, async (req, res) => {
   try {
     const profile = await Applicants.findById(req.params.id);
     if (!profile) {
