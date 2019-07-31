@@ -1,8 +1,7 @@
 const db = require("../data/dbConfig");
 
 // Add applicant and return applicant resource
-const add = async profile => {
-  let { userId, applicant } = profile;
+const add = async ({ userId, applicant }) => {
   let newApplicant = { userId, ...applicant };
 
   await db("applicants")
@@ -38,7 +37,7 @@ const update = async (id, profile) => {
 
 // Delete applicant by id
 const remove = id => {
-  return db("applicants")
+  await db("applicants")
     .where({ userId: id })
     .del();
   return parseInt(id, 10);

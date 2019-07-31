@@ -40,11 +40,20 @@ const remove = id => {
     .del();
 };
 
+const findApplicant = id => {
+  return db("applicants")
+    .where({ userId: id })
+    .select("id")
+    .first()
+    .returning("id");
+};
+
 module.exports = {
   add,
   findAll,
   findBy,
   findById,
   update,
-  remove
+  remove,
+  findApplicant
 };
