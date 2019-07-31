@@ -1,8 +1,7 @@
 const db = require("../data/dbConfig");
 
 // Add applicant and return applicant resource
-const add = async profile => {
-  let { userId, applicant } = profile;
+const add = async ({ userId, applicant }) => {
   let newApplicant = { userId, ...applicant };
 
   await db("applicants")
