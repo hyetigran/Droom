@@ -9,6 +9,7 @@ const {
 } = require("./education");
 const { companyValidation, updateCompanyValidation } = require("./companies");
 
+const { jobValidation, updateJobValidation } = require("./jobs");
 module.exports = {
   authValidation,
   experienceValidation,
