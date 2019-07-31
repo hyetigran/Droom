@@ -20,6 +20,15 @@ const findAll = (userId) => {
   return db("experience").where({applicantId});
 };
 
+// Find applicantId by userId
+const findApplicant = (id) => {
+  return db('applicants')
+    .where({userId: id})
+    .select('id')
+    .first()
+    .returning('id')
+}
+
 // Find user by id
 const findById = userId => {
   return db("experience")
@@ -49,7 +58,9 @@ const remove = id => {
 module.exports = {
   add,
   findAll,
+  findApplicant,
   findById,
   update,
-  remove
+  remove,
+  
 };
