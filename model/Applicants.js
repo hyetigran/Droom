@@ -37,7 +37,7 @@ const update = async (id, profile) => {
 
 // Delete applicant by id
 const remove = id => {
-  return db("applicants")
+  await db("applicants")
     .where({ userId: id })
     .del();
   return parseInt(id, 10);
