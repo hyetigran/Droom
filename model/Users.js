@@ -1,13 +1,4 @@
-const db = require("../database/dbConfig");
-
-module.exports = {
-  add,
-  findAll,
-  findBy,
-  findById,
-  update,
-  remove
-};
+const db = require("../data/dbConfig");
 
 // Add user and return user resource
 const add = async user => {
@@ -47,4 +38,13 @@ const remove = id => {
   return db("users")
     .where({ id })
     .del();
+};
+
+module.exports = {
+  add,
+  findAll,
+  findBy,
+  findById,
+  update,
+  remove
 };
