@@ -4,16 +4,16 @@ module.exports = {
 };
 
 function educationValidation(req, res, next) {
-  const { userId, applicantEducation } = req.body;
+  const { userId, seekerEducation } = req.body;
 
-  applicantEducation.map(exp => {
+  seekerEducation.map(edu => {
     const {
-      expTitle,
-      expCompany,
-      expDescription,
-      expStartDate,
-      expEndDate
-    } = exp;
+      eduSchool,
+      eduCredential,
+      eduDescription,
+      eduStartDate,
+      eduEndDate
+    } = edu;
 
     if (!userId) {
       return res.status(400).json({
@@ -21,81 +21,78 @@ function educationValidation(req, res, next) {
       });
     }
 
-    if (!expTitle) {
+    if (!eduSchool) {
       return res.status(400).json({
-        message: "Please provide a job title"
+        message: "Please provide a school"
       });
     }
 
-    if (!expCompany) {
+    if (!eduCredential) {
       return res.status(400).json({
-        message: "Please provide a user id"
-      });
-    }
-    if (!expDescription) {
-      return res.status(400).json({
-        message: "Please provide a user id"
+        message: "Please provide a credential"
       });
     }
 
-    if (!expStartDate) {
+    if (!eduDescription) {
       return res.status(400).json({
-        message: "Please provide a user id"
+        message: "Please provide a description"
       });
     }
 
-    if (!expEndDate) {
+    if (!eduStartDate) {
       return res.status(400).json({
-        message: "Please provide a user id"
+        message: "Please provide a start date"
       });
     }
 
-    next();
+    if (!eduEndDate) {
+      return res.status(400).json({
+        message: "Please provide a end date"
+      });
+    }
   });
+
+  next();
 }
 
 function updateEducationValidation(req, res, next) {
   const {
-    expTitle,
-    expCompany,
-    expDescription,
-    expStartDate,
-    expEndDate
-  } = exp;
+    eduSchool,
+    eduCredential,
+    eduDescription,
+    eduStartDate,
+    eduEndDate
+  } = req.body;
 
-  if (!userId) {
+  if (!eduSchool) {
     return res.status(400).json({
-      message: "Please provide a user id"
-    });
-  }
-
-  if (!expTitle) {
-    return res.status(400).json({
-      message: "Please provide a job title"
+      message: "Please provide a school"
     });
   }
 
-  if (!expCompany) {
+  if (!eduCredential) {
     return res.status(400).json({
-      message: "Please provide a user id"
-    });
-  }
-  if (!expDescription) {
-    return res.status(400).json({
-      message: "Please provide a user id"
+      message: "Please provide a credential"
     });
   }
 
-  if (!expStartDate) {
+  if (!eduDescription) {
     return res.status(400).json({
-      message: "Please provide a user id"
+      message: "Please provide a description"
     });
   }
 
-  if (!expEndDate) {
+  if (!eduStartDate) {
     return res.status(400).json({
-      message: "Please provide a user id"
+      message: "Please provide a start date"
     });
   }
+
+  if (!eduEndDate) {
+    return res.status(400).json({
+      message: "Please provide a end date"
+    });
+  }
+
   next();
 }
