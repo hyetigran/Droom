@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const Applicants = require("../model/Applicants");
 const {
-  applicantValidation,
-  updateApplicantValidation
+  applicantsValidation,
+  updateApplicantsValidation
 } = require("../middleware/validation/index");
 
-router.post("/", applicantValidation, async (req, res) => {
+router.post("/", applicantsValidation, async (req, res) => {
   try {
     const profile = await Applicants.add(req.body);
     res.status(201).json(profile);
@@ -33,7 +33,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", updateApplicantValidation, async (req, res) => {
+router.put("/:id", updateApplicantsValidation, async (req, res) => {
   try {
     const profile = await Applicants.findById(req.params.id);
     if (!profile) {
