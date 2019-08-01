@@ -9,7 +9,7 @@ router.post("/register", authValidation, async (req, res) => {
     let user = req.body;
     let existingUser = await Users.findBy({ email: user.email });
     if (existingUser.length) {
-      return res.status(409).json({
+      return res.status(400).json({
         message: "Oops, looks like this email already exists"
       });
     }
