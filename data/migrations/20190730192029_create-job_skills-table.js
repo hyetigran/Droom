@@ -9,10 +9,7 @@ exports.up = function(knex) {
       .inTable("jobs")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
-    table
-      .string("jobSkill", 128)
-      .notNullable()
-      .unique();
+    table.string("jobSkill", 128).notNullable();
   });
 };
 
