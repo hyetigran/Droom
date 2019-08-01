@@ -15,13 +15,15 @@ const findAll = () => {
 
 // Find user by parameter
 const findBy = filter => {
-  return db("users").where(filter);
+  return db("users")
+    .where(filter)
+    .first();
 };
 
 // Find user by id
 const findById = id => {
   return db("users")
-    .where(id)
+    .where({ id })
     .first();
 };
 

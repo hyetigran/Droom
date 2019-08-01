@@ -33,7 +33,12 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to Droom" });
 });
 
-const port = process.env.PORT || 4000;
-app.listen(port, () => {
-  console.log(`listening to port: ${port}`);
-});
+if (require.main == module) {
+  console.log(require.main);
+  const port = process.env.PORT || 4000;
+  app.listen(port, () => {
+    console.log(`listening to port: ${port}`);
+  });
+} else {
+  module.exports = app;
+}

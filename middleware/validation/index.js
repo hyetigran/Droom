@@ -1,4 +1,4 @@
-const authValidation = require("./auth");
+const { authValidation } = require("./auth");
 const {
   experienceValidation,
   updateExperienceValidation

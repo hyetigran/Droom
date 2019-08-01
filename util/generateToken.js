@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const { jwtSecret } = require("../config/keys");
 
-module.exports = user => {
+const generateToken = user => {
   const payload = {
     subject: user.id,
     applicant: user.applicant,
@@ -12,3 +12,5 @@ module.exports = user => {
   };
   return jwt.sign(payload, jwtSecret, options);
 };
+
+module.exports = { generateToken };
