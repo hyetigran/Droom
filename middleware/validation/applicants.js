@@ -1,9 +1,9 @@
 module.exports = {
-  applicantValidation,
-  updateApplicantValidation
+  applicantsValidation,
+  updateApplicantsValidation
 };
 
-function applicantValidation(req, res, next) {
+function applicantsValidation(req, res, next) {
   const { userId, applicant } = req.body;
 
   const {
@@ -81,7 +81,7 @@ function applicantValidation(req, res, next) {
   next();
 }
 
-function updateApplicantValidation(req, res, next) {
+function updateApplicantsValidation(req, res, next) {
   const {
     firstName,
     lastName,
