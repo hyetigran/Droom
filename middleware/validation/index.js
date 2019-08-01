@@ -10,6 +10,12 @@ const {
 const { companyValidation, updateCompanyValidation } = require("./companies");
 
 const { jobValidation, updateJobValidation } = require("./jobs");
+
+const {
+  jobSkillsValidation,
+  updateJobSkillsValidation
+} = require("./jobSkills");
+
 module.exports = {
   authValidation,
   experienceValidation,
@@ -17,5 +23,9 @@ module.exports = {
   educationValidation,
   updateEducationValidation,
   companyValidation,
-  updateCompanyValidation
+  updateCompanyValidation,
+  jobValidation,
+  updateJobValidation,
+  jobSkillsValidation,
+  updateJobSkillsValidation
 };
