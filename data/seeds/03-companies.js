@@ -5,8 +5,6 @@ exports.seed = function(knex, Promise) {
       id: 1,
       userId: 1,
       companyName: "Microsoft",
-      companyPicture:
-        "https://www.zdnet.de/wp-content/uploads/2017/02/microsoft-logo.png",
       companyDescription:
         "At Microsoft, our mission is to empower every person and every organization on the planet to achieve more. Our mission is grounded in both the world in which we live and the future we strive to create. Today, we live in a mobile-first, cloud-first world, and the transformation we are driving across our businesses is designed to enable Microsoft and our customers to thrive in this world.",
       country: "United States",

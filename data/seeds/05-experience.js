@@ -1,29 +1,29 @@
 exports.seed = function(knex, Promise) {
   return knex("experience").insert([
     {
-      seekerId: 1,
-      jobTitle: "Junior Software Engineer",
-      jobCompany: "Apple",
-      jobDescription:
+      applicantId: 1,
+      expTitle: "Junior Software Engineer",
+      expCompany: "Apple",
+      expDescription:
         "Responsibilities include Front-end UI development, Back-end management.",
-      jobStart: "5-23-2016",
-      jobEnd: "4-23-2017"
+      expStartDate: "5-23-2016",
+      expEndDate: "4-23-2017"
     },
     {
-      seekerId: 2,
-      jobTitle: "Senior Software Engineer",
-      jobCompany: "GitHub",
-      jobDescription: "Lead a team of engineers creating scalable APIs",
-      jobStart: "1-15-2018",
-      jobEnd: "4-23-2022"
+      applicantId: 2,
+      expTitle: "Senior Software Engineer",
+      expCompany: "GitHub",
+      expDescription: "Lead a team of engineers creating scalable APIs",
+      expStartDate: "1-15-2018",
+      expEndDate: "4-23-2022"
     },
     {
-      seekerId: 3,
-      jobTitle: "Software Engineer",
-      jobCompany: "Microsoft",
-      jobDescription: "Software Engineer at Microsoft Cloud Database team.",
-      jobStart: "2-2-2018",
-      jobEnd: "Present"
+      applicantId: 3,
+      expTitle: "Software Engineer",
+      expCompany: "Microsoft",
+      expDescription: "Software Engineer at Microsoft Cloud Database team.",
+      expStartDate: "2-2-2018",
+      expEndDate: "Present"
     }
   ]);
 };

@@ -11,6 +11,7 @@ exports.seed = function(knex, Promise) {
         "Masters or Bachelor’s degree or equivalent in computer science or related technical disciplines.</li><li>Experience with software engineering best practices (code quality, repo hygiene, code reviews, unit testing, design documentation, continuous integration, deployment).</li><li>Experience in the JavaScript ecosystem and related technologies such as React, React Native, TypeScript, Redux, HTML5, CSS.</li></ul>",
       jobExperiencePreferred:
         "Experience in building performant experiences using technologies such as webpack and npm to optimize bundles and package dependencies.Experience in experimentation framework and understanding how to measure end user success.Thrives in dynamic, fast-paced environments where passion for customer engagement and great experience are at the forefront of all design & development.",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -23,6 +24,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>Proficient JavaScript programmer</li><li>Experience with JS frameworks is highly desirable: React, Angular, etc.</li><li>Experience with CSS3 and Less/Sass in large scale applications</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Knowledge of media streaming, HTML5 MSE/EME, encryption standards a plus</li><li>Strong problem solving and critical thinking skills</li><li>Passion for quality and close attention to details</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -35,6 +37,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>5+ years building web services at scale</li><li>Experience with Git and GitHub</li><li>Experience with queueing and streaming systems like Kafka, RabbitMQ, etc</li></ul>",
       jobExperiencePreferred:
         "<ul><li>You have used GraphQL in production environments</li><li>You have experience working with Ruby and/or Go</li><li>You have worked on distributed teams</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -47,6 +50,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>Five or more years of application architecture and/or product development experience.</li><li>Experience in application design and design/delivery of complex integrated solutions.</li><li>Strong experience with C++ Development</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Experienced in 3 tier architectures, strong experience in designing and re-platforming enterprise applications</li><li>The role requires explaining solutions to business teams. Experience in role bridging IT and Business is a great plus</li><li>Experience and maturity to deal and negotiate with senior business executives is required to be successful in this role</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -59,6 +63,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>Senior-level full stack engineer with 5+ years of experience</li><li>Proficient in HTML 5, CSS, and JavaScript frameworks, like React, AngularJS, or Ember</li><li>Strong in Java experience, proficiency with Ruby on rails OR another object oriented programming language</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Experience integrating with internal and third party solutions</li><li>Strong data structures, algorithms and design patterns knowledge</li><li>Demonstrable ability to work across multiple teams to deliver an end product</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -71,6 +76,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>Are passionate about building massively scalable systems.</li><li>Have a growth mindset and the belief that your skills and abilities can be developed.</li><li>Have a track record of taking on and delivering solutions to significant distributed systems problems.</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Network protocols: IPv6, CDN, DNS</li><li>Strong data structures, algorithms and design patterns knowledge</li><li>Development on the JVM</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -83,6 +89,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>You have at least 3+ years of experience in Web Development</li><li>You are experienced with modern JavaScript coding, testing, debugging, and automation techniques</li><li>You are comfortable working in an agile environment, and are comfortable challenging yourself and your team to improve their ways of working</li></ul>",
       jobExperiencePreferred:
         "<ul><li>You are adaptable and inventive and you are able to develop effective solutions to problems</li><li>You care deeply about web technologies, business impact, usability, design and music</li><li>You have excellent analytical and problem-solving skills, and can communicate your ideas, especially to those not technologically proficient</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -95,6 +102,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>5+ years of JavaScript experience, including concepts like asynchronous programming, closures, types, and ES6</li><li>5+ years of HTML/CSS experience, including concepts like layout, specificity, cross browser compatibility, and accessibility</li><li>5+ years experience with browser APIs and optimizing front end performance</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Experience with React</li><li>BS/MS in Computer Science or a related technical field</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -107,6 +115,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>5+ years of experience building clean, maintainable, and well-tested code.</li><li>Expertise in Javascript and Node.js. (React and Redux experience a plus).</li><li>Experience with Python or another server-side scripting language. Great engineering skills and strong CS fundamentals.</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Excellent collaborative and communication skills.</li><li>Able to work effectively under schedule pressure to fix defects, review code, design, write, test new code, and diagnose production issues.</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     },
     {
@@ -119,6 +128,7 @@ exports.seed = function(knex, Promise) {
         "<ul><li>BS degree in Computer Science, a related technical field, or equivalent practical experience.</li><li>Software development experience in one or more general purpose programming languages.</li><li>Experience working with two or more from the following: web application development, Unix/Linux environments, mobile application development, distributed and parallel systems, machine learning, information retrieval, natural language processing, networking, developing large software systems, and/or security software development.</li><li>Working proficiency and communication skills in verbal and written English.</li></ul>",
       jobExperiencePreferred:
         "<ul><li>Master’s, PhD degree, further education or experience in engineering, computer science or a related technical field.</li><li>Experience with one or more general purpose programming languages, including but not limited to: Java, C/C++, C#, Objective-C, Python, JavaScript, or Go.</li><li>Interest and ability to learn other coding languages as needed.</li></ul>",
+      jobResponsibilities: "",
       jobApplyBy: "30 May 2019"
     }
   ]);

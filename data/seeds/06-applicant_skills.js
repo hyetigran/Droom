@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-  return knex("seeker_skills").insert([
+  return knex("applicant_skills").insert([
     {
       seekerId: 1,
       seekerSkill: "Golang"
