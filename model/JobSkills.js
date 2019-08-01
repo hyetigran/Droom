@@ -18,10 +18,9 @@ const findAll = () => {
 };
 
 // Find job skill by filter
-const findBy = (filter) => {
-  return db('job_skills')
-    .where({jobId: filter})
-}
+const findBy = filter => {
+  return db("job_skills").where({ jobId: filter });
+};
 
 // Find job skill by id
 const findById = id => {
@@ -36,11 +35,11 @@ const update = async (id, updated) => {
   await db("job_skills")
     .where({ id })
     .update(updated);
-  return findById(id)
+  return findById(id);
 };
 
 // Delete a job skill
-const remove = id => {
+const remove = async id => {
   await db("job_skills")
     .where({ id })
     .del();
@@ -53,6 +52,5 @@ module.exports = {
   findBy,
   findById,
   update,
-  remove,
-  
+  remove
 };

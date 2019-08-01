@@ -1,10 +1,10 @@
 const db = require("../data/dbConfig");
 const Jobs = require("./Jobs");
 const Applicants = require("./Applicants");
-const ApplicantsSkills = require("./ApplicantSkills");
+const ApplicantSkills = require("./ApplicantSkills");
 const Companies = require("./Companies");
 
-const seekerMatches = async id => {
+const applicantMatches = async id => {
   let applicant = await Applicants.findById(id);
 
   let applicantSkills = await ApplicantSkills.findApplicant(id);
@@ -74,7 +74,7 @@ const companyMatches = async id => {
           count++;
         }
       });
-      let udpatedUser = {
+      let updatedUser = {
         ...applicant,
         jobId: job.jobId,
         count
@@ -124,7 +124,7 @@ const applicantMatch = async (userId, jobId) => {
     .first();
 
   if (matched && matched.jobMatch) {
-    const udpateMatched = {
+    const updateMatched = {
       jobId,
       applicantId: id,
       applicantMatch: true,
