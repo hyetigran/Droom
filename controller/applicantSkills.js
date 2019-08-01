@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const ApplicantSkills = require("../model/ApplicantSkills");
 const {
-  applicantSkillsValidation,
-  updateApplicantSkillsValidation
+  skillsValidation,
+  updateSkillsValidation
 } = require("../middleware/validation/index");
 
-router.post("/", applicantSkillsValidation, async (req, res) => {
+router.post("/", skillsValidation, async (req, res) => {
   try {
     const profile = await ApplicantSkills.findApplicant(req.body.skills.userId);
 
@@ -49,7 +49,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", updateApplicantSkillsValidation, async (req, res) => {
+router.put("/:id", updateSkillsValidation, async (req, res) => {
   try {
     const { id } = req.params;
     const skill = await ApplicantSkills.findById(id);

@@ -20,6 +20,10 @@ const {
   applicantsValidation,
   updateApplicantsValidation
 } = require("./applicants");
+const {
+  skillsValidation,
+  updateSkillsValidation
+} = require("./applicantSkills");
 
 module.exports = {
   authValidation,
@@ -34,5 +38,7 @@ module.exports = {
   jobSkillsValidation,
   updateJobSkillsValidation,
   applicantsValidation,
-  updateApplicantsValidation
+  updateApplicantsValidation,
+  skillsValidation,
+  updateSkillsValidation
 };
