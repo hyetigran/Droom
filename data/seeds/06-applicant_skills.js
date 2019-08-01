@@ -1,116 +1,116 @@
 exports.seed = function(knex, Promise) {
   return knex("applicant_skills").insert([
     {
-      seekerId: 1,
-      seekerSkill: "Golang"
+      applicantId: 1,
+      applicantSkill: "Golang"
     },
     {
-      seekerId: 1,
-      seekerSkill: "JavaScript"
+      applicantId: 1,
+      applicantSkill: "JavaScript"
     },
     {
-      seekerId: 1,
-      seekerSkill: "PHP"
+      applicantId: 1,
+      applicantSkill: "PHP"
     },
     {
-      seekerId: 1,
-      seekerSkill: "HTML"
+      applicantId: 1,
+      applicantSkill: "HTML"
     },
     {
-      seekerId: 1,
-      seekerSkill: "CSS"
+      applicantId: 1,
+      applicantSkill: "CSS"
     },
     {
-      seekerId: 1,
-      seekerSkill: "Git"
+      applicantId: 1,
+      applicantSkill: "Git"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Golang"
+      applicantId: 2,
+      applicantSkill: "Golang"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Python"
+      applicantId: 2,
+      applicantSkill: "Python"
     },
     {
-      seekerId: 2,
-      seekerSkill: "JavaScript"
+      applicantId: 2,
+      applicantSkill: "JavaScript"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Node"
+      applicantId: 2,
+      applicantSkill: "Node"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Express"
+      applicantId: 2,
+      applicantSkill: "Express"
     },
     {
-      seekerId: 2,
-      seekerSkill: "C++"
+      applicantId: 2,
+      applicantSkill: "C++"
     },
     {
-      seekerId: 2,
-      seekerSkill: "MySQL"
+      applicantId: 2,
+      applicantSkill: "MySQL"
     },
     {
-      seekerId: 2,
-      seekerSkill: "PostgreSQL"
+      applicantId: 2,
+      applicantSkill: "PostgreSQL"
     },
     {
-      seekerId: 2,
-      seekerSkill: "HTML"
+      applicantId: 2,
+      applicantSkill: "HTML"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Git"
+      applicantId: 2,
+      applicantSkill: "Git"
     },
     {
-      seekerId: 2,
-      seekerSkill: "React"
+      applicantId: 2,
+      applicantSkill: "React"
     },
     {
-      seekerId: 2,
-      seekerSkill: "CSS"
+      applicantId: 2,
+      applicantSkill: "CSS"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Django"
+      applicantId: 2,
+      applicantSkill: "Django"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Redux"
+      applicantId: 2,
+      applicantSkill: "Redux"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Webpack"
+      applicantId: 2,
+      applicantSkill: "Webpack"
     },
     {
-      seekerId: 2,
-      seekerSkill: "Git"
+      applicantId: 2,
+      applicantSkill: "Git"
     },
     {
-      seekerId: 3,
-      seekerSkill: "Java"
+      applicantId: 3,
+      applicantSkill: "Java"
     },
     {
-      seekerId: 3,
-      seekerSkill: "Spring Framework"
+      applicantId: 3,
+      applicantSkill: "Spring Framework"
     },
     {
-      seekerId: 3,
-      seekerSkill: "React"
+      applicantId: 3,
+      applicantSkill: "React"
     },
     {
-      seekerId: 3,
-      seekerSkill: "MySQL"
+      applicantId: 3,
+      applicantSkill: "MySQL"
     },
     {
-      seekerId: 3,
-      seekerSkill: "PostgreSQL"
+      applicantId: 3,
+      applicantSkill: "PostgreSQL"
     },
     {
-      seekerId: 3,
-      seekerSkill: "Ruby"
+      applicantId: 3,
+      applicantSkill: "Ruby"
     }
   ]);
 };
