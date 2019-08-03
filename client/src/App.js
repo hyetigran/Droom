@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+//import * as actions from '../actions';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Heaer from './components/Navigation/Header.js'
+
+
+class App extends React.Component {
+  componentDidMount() {
+    //this.props.data
+  }
+
+  render () {
+    return (
+      <div className="container">
+        <BrowserRouter>
+          <div>
+            <Header />
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
 export default App;
