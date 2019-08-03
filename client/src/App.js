@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 //import * as actions from '../actions';
 
-import Heaer from './components/Navigation/Header.js'
+import Header from './components/Navigation/Header.js'
 
 
 class App extends React.Component {
