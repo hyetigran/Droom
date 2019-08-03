@@ -12,6 +12,7 @@ const jobsController = require("./controller/jobs");
 const jobSkillsController = require("./controller/jobSkills");
 const matchesController = require("./controller/matches");
 const matchedController = require("./controller/matched");
+const billingController = require("./controller/billingStripe");
 const applicantSkillsController = require("./controller/applicantSkills");
 
 const app = express();
@@ -28,6 +29,7 @@ app.use("/api/jobs", authenticate, jobsController);
 app.use("/api/job-skills", authenticate, jobSkillsController);
 app.use("/api/matches", authenticate, matchesController);
 app.use("/api/matched", authenticate, matchedController);
+app.use("/api/stripe", authenticate, billingController);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to Droom" });

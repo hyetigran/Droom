@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-router.post("/api/stripe", async (req, res) => {
+router.post("/billing", async (req, res) => {
   const charge = await stripe.charges.create({
     amount: 1000,
     currency: "usd",
