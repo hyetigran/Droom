@@ -13,3 +13,5 @@ router.post("/billing", async (req, res) => {
   const user = await req.user.save();
   res.send(user);
 });
+
+module.exports = router;
