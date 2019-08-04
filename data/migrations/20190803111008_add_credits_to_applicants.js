@@ -5,5 +5,7 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropColumn("credits");
+  return knex.schema.table("applicants", column => {
+    column.dropColumn("credits");
+  });
 };

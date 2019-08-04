@@ -1,4 +1,5 @@
 const express = require("express");
+require("./services/passport");
 
 const serverMiddleware = require("./config/serverMiddleware");
 const authenticate = require("./middleware/authenticate");
@@ -36,8 +37,7 @@ app.get("/", (req, res) => {
 });
 
 if (require.main == module) {
-  console.log(require.main);
-  const port = process.env.PORT || 5000;
+  const port = process.env.PORT || 4000;
   app.listen(port, () => {
     console.log(`listening to port: ${port}`);
   });

@@ -2,10 +2,9 @@ const db = require("../data/dbConfig");
 
 // Add user and return user resource
 const add = async user => {
-  const [id] = await db("users")
-    .insert(user)
-    .returning("id");
-  return findById(id);
+  const [id] = await db("users").insert(user);
+  //.returning("id");
+  return findBy(id);
 };
 
 // Find all users
@@ -15,9 +14,7 @@ const findAll = () => {
 
 // Find user by parameter
 const findBy = filter => {
-  return db("users")
-    .where(filter)
-    .first();
+  return db("users").where(filter);
 };
 
 // Find user by id
@@ -55,6 +52,7 @@ module.exports = {
   findAll,
   findBy,
   findById,
+  findByGoogleId,
   update,
   remove,
   findApplicant

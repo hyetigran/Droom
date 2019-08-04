@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-//import { connect } from 'react-redux';
-//import * as actions from '../actions';
+import { connect } from 'react-redux';
+import * as actions from './store/actions';
 
 import Header from "./components/Navigation/Header.js";
 
 class App extends React.Component {
   componentDidMount() {
-    //this.props.data
+    this.props.fetchUser()
   }
 
   render() {
@@ -23,4 +23,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null, actions)(App);

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Compnies = require("../model/Companies");
+const Companies = require("../model/Companies");
 const {
   companyValidation,
   updateCompanyValidation

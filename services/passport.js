@@ -5,16 +5,13 @@ const keys = require("../config/keys");
 const Users = require("../model/Users");
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  return done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
   Users.findById(id).then(user => {
     done(null, user);
   });
-  // .catch(err => {
-  //   console.log(err);
-  // });
 });
 
 passport.use(
@@ -22,15 +19,17 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "/api/auth/google/callback",
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
-      const existingUser = await Users.findby(profile.id);
+      console.log("profile here", profile.id);
+      const existingUser = await Users.findBy({ googleId: profile.id });
       if (existingUser) {
         return done(null, existingUser);
       }
       const user = await Users.add({ googleId: profile.id });
+      console.log("2nd", user);
       done(null, user);
     }
   )

@@ -50,33 +50,25 @@ router.post("/login", authValidation, async (req, res) => {
   }
 });
 
-router.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/");
-});
-
 // Google Auth
 router.get(
-  "/auth/google",
+  "/google",
   passport.authenticate("google", {
     scope: ["profile", "email"]
   })
 );
 
-router.get(
-  "/auth/google/callback",
-  passport.authenticate("google"),
-  (req, res) => {
-    res.redirect("/dashboard");
-  }
-);
+router.get("/google/callback", passport.authenticate("google"), (req, res) => {
+  res.redirect("/");
+});
 
-router.get("/api/logout", (req, res) => {
+router.get("/google_logout", (req, res) => {
   req.logout();
   res.redirect("/");
 });
 
-router.get("/api/current_user", (req, res) => {
+router.get("/current_user", (req, res) => {
+  console.log(req.user);
   res.send(req.user);
 });
 
