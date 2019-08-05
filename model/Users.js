@@ -2,10 +2,9 @@ const db = require("../data/dbConfig");
 
 // Add user and return user resource
 const add = async user => {
-  const [id] = await db("users")
-    .insert(user)
-    .returning("id");
-  return findById(id);
+  const [id] = await db("users").insert(user);
+  //.returning("id");
+  return findBy(id);
 };
 
 // Find all users
@@ -21,7 +20,7 @@ const findBy = filter => {
 // Find user by id
 const findById = id => {
   return db("users")
-    .where(id)
+    .where({ id })
     .first();
 };
 

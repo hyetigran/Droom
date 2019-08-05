@@ -1,4 +1,4 @@
-module.exports = (req, res, next) => {
+const authValidation = (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -8,3 +8,5 @@ module.exports = (req, res, next) => {
   }
   next();
 };
+
+module.exports = { authValidation };

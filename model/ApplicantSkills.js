@@ -2,7 +2,11 @@ const db = require("../data/dbConfig");
 
 // Add skills and return skills resource
 const add = async ({ userId, applicantSkills }) => {
-  let applicantId  = db('applicants').where({userId}).select('id').first().returning('id')
+  let applicantId = db("applicants")
+    .where({ userId })
+    .select("id")
+    .first()
+    .returning("id");
 
   const newSkills = applicantSkills.map(skill => {
     return { applicantId, applicantSkill: skill };
@@ -16,19 +20,19 @@ const add = async ({ userId, applicantSkills }) => {
 };
 
 // Find all skills
-const findAll = (userId) => {
+const findAll = async userId => {
   let applicantId = await findApplicant(userId);
-  return db("applicant_skills").where({applicantId});
+  return db("applicant_skills").where({ applicantId });
 };
 
 // Find applicantId by userId
-const findApplicant = (id) => {
-  return db('applicants')
-    .where({userId: id})
-    .select('id')
+const findApplicant = id => {
+  return db("applicants")
+    .where({ userId: id })
+    .select("id")
     .first()
-    .returning('id')
-}
+    .returning("id");
+};
 
 // Find user by id
 const findById = id => {
@@ -49,7 +53,7 @@ const update = async (id, skill) => {
 };
 
 // Delete applicant by id
-const remove = id => {
+const remove = async id => {
   await db("applicant_skills")
     .where({ id })
     .del();
@@ -63,5 +67,5 @@ module.exports = {
   findApplicant,
   findById,
   update,
-  remove,
+  remove
 };

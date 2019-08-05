@@ -15,19 +15,19 @@ const add = async ({ userId, applicantExperience }) => {
 };
 
 // Find all experience
-const findAll = (userId) => {
+const findAll = async userId => {
   let { applicantId } = await findApplicant(userId);
-  return db("experience").where({applicantId});
+  return db("experience").where({ applicantId });
 };
 
 // Find applicantId by userId
-const findApplicant = (id) => {
-  return db('applicants')
-    .where({userId: id})
-    .select('id')
+const findApplicant = id => {
+  return db("applicants")
+    .where({ userId: id })
+    .select("id")
     .first()
-    .returning('id')
-}
+    .returning("id");
+};
 
 // Find user by id
 const findById = userId => {
@@ -48,7 +48,7 @@ const update = async (id, profile) => {
 };
 
 // Delete applicant by id
-const remove = id => {
+const remove = async id => {
   await db("experience")
     .where({ userId: id })
     .del();
@@ -61,6 +61,5 @@ module.exports = {
   findApplicant,
   findById,
   update,
-  remove,
-  
+  remove
 };

@@ -36,7 +36,7 @@ const update = async (id, profile) => {
 };
 
 // Delete applicant by id
-const remove = id => {
+const remove = async id => {
   await db("companies")
     .where({ id })
     .del();

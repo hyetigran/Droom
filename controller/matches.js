@@ -3,6 +3,7 @@ const Matches = require("../model/Matches");
 const Applicants = require("../model/Applicants");
 const Jobs = require("../model/Jobs");
 const Companies = require("../model/Companies");
+// used applicants instead of users db
 const Users = require("../model/Users");
 
 router.get("/applicant/:id", async (req, res) => {

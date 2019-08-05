@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Jobs = require("../models/Jobs");
+const Jobs = require("../model/Jobs");
 
 const {
   jobValidation,
