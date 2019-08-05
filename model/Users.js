@@ -52,7 +52,6 @@ module.exports = {
   findAll,
   findBy,
   findById,
-  findByGoogleId,
   update,
   remove,
   findApplicant

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LandingBody from './LandingBody'
-import LandingFooter from './LandingFooter'
+import Footer from './Footer'
 import Header from '../../components/Navigation/Header'
 
 const Landing = () => {
@@ -10,7 +10,7 @@ const Landing = () => {
     <StyledLanding>
       <Header />
       <LandingBody />
-      <LandingFooter/>
+      <Footer/>
     </StyledLanding>
   )
 }
